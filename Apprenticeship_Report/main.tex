@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{report}
+
+% ====== Packages ======
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % Language used
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{libertine}  % Font style
+
+% ====== Table formatting ======
+\renewcommand{\arraystretch}{1.5}     
+\setlength{\arrayrulewidth}{0.5mm}      
+\setlength{\tabcolsep}{10pt}            
+
+% ====== Remove page break before chapters ======
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+% ====== Page margins ======
+\usepackage{geometry}
+\geometry{left=3.0cm, right=3.0cm, top=1.0cm, bottom=2.0cm}
+
+% ====== Custom colors ======
+\definecolor{chapterColor}{HTML}{133E87}
+\definecolor{sectionColor}{HTML}{2E7D32}
+\definecolor{subsectionColor}{HTML}{5459AC}
+
+% ====== Chapter numbering ======
+\renewcommand{\thechapter}{\arabic{chapter}}
+
+% ====== Chapter formatting ======
+\titleformat{\chapter}[block]
+  {\Huge\bfseries\color{chapterColor}}
+  {\thechapter.} 
+  {8pt}
+  {\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{2.5ex plus 1ex minus .2ex}{3ex plus .3ex}
+
+% ====== Section formatting ======
+\titleformat{\section}
+  {\Large\bfseries\color{sectionColor}}
+  {\hspace{1em}\thesection}{0.5em}{\MakeUppercase}
+\titlespacing*{\section}{0pt}{2.5ex plus 1ex minus .2ex}{0.8em}
+
+% ====== Subsection formatting ======
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{subsectionColor}}
+  {\hspace{1.5em}\thesubsection}{0.5em}{\MakeUppercase}
+\titlespacing*{\subsection}{0pt}{2ex plus .5ex minus .2ex}{0.8em}
+
+% ====== Metadata ======
+\title{\Huge Activity Report\\ \LARGE Internship/Apprenticeship Report}
+\author{\textbf{Your Name}}
+\date{Academic Year: 20XX -- 20YY}
+
+% ====== Document Start ======
+\begin{document}
+
+% ====== Cover page ======
+\input{Cover/cover.tex}
+
+% ======== Table of Contents ========
+\newpage
+\tableofcontents
+\newpage
+
+% ====== Content sections ======
+
+\chapter{Chapter Exemple}
+Chapter text
+
+\section{Section Exemple}
+Section text
+
+\subsection{Subsection Exemple}
+Subsection text
+
+\newpage
+\input{Glossary/glossary.tex}
+
+\newpage
+\input{Bibliography/bibliography.tex}
+
+\end{document}

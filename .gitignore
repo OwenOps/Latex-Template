@@ -1,0 +1,48 @@
+# Ignorer les fichiers de log générés par LaTeX
+*.log
+
+# Ignorer les fichiers auxiliaires
+*.aux
+*.bbl
+*.blg
+*.brf
+*.dvi
+*.lof
+*.lot
+*.out
+*.toc
+*.lot
+*.fls
+*.fdb_latexmk
+
+# Ignorer les fichiers PDF générés
+*.pdf
+
+# Ignorer les fichiers temporaires générés par les éditeurs
+*~
+*.swp
+*.bak
+*.tmp
+
+# Ignorer les fichiers de sauvegarde
+*.bak
+*.swp
+
+# Ignorer les répertoires temporaires de compilation
+_build/
+out/
+
+# Ignorer les fichiers spécifiques aux compilateurs
+latexmk.log
+latexmkrc
+*.synctex*
+
+# Si vous utilisez des bibliographies ou bibtex
+*.bbl
+*.blg
+
+# Ignorer les fichiers de configuration des éditeurs (comme emacs, vim, etc.)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
